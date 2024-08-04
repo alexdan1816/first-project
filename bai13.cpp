@@ -23,5 +23,5 @@ int main()
         kq2*=x;
     }
     cout<<"ket qua cua "<<x<<" mu "<<n<<" = "<<kq2;
-
+//vai lon luon biet dung git duoc mot it roi
 }
