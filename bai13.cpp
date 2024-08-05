@@ -1,29 +1,30 @@
 #include <iostream>
 using namespace std;
+long long gt(int x)
+{
+    if(x<0)
+    return 0;
+    int kq=1;
+    for(int i=1;i<=x;i++)
+    kq*=i;
+    return kq;
+}
+
+long long mu(int x, int n)
+{
+    int kq=1;
+    for(int i=0;i<n;i++)
+    kq*=x;
+    return kq;
+}
+
 int main()
 {
     int n;
-    cout<<"Nhap gia tri cua n"<<endl;
-    cin>>n;
-    if(n<0)
-        return 0;
-    int kq=1;
-    for (int i=1;i<=n;i++)
-    {
-        kq*=i;
-    }
-    cout<<"giai thua cua "<<n<<" bang = "<<kq<<endl;
-
     int x;
-    long long kq2=1;
-    cout<<"nhap gia tri cua x";
-    cin>>x;
-    for(int i=0;i<n;i++)
-    {
-        kq2*=x;
-    }
-    cout<<"ket qua cua "<<x<<" mu "<<n<<" = "<<kq2;
-//vai lon luon biet dung git duoc mot it roi
-//test pull code
-    
+    cout<<"nhap gia tri cua x va n";
+    cin>>x>>n;
+    cout<<n<<"!= "<<gt(n)<<endl;
+    cout<<x<<" mu "<<n<<"= "<<mu(x,n);
+    return 0;
 }
